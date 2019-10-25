@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/bread"/>
+    <TextView
+        android:id="@+id/food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/image"
+        app:layout_constraintTop_toTopOf="@id/image"
+        android:layout_marginLeft="30dp"
+        android:textSize="30sp"
+        android:textColor="@color/textColor"/>
+
+    <TextView
+        android:id="@+id/foodpriceicon1"
+        android:layout_marginTop="50dp"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="30dp"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"/>
+    <TextView
+        android:id="@+id/food_price"
+        app:layout_constraintLeft_toRightOf="@id/foodpriceicon1"
+        app:layout_constraintTop_toTopOf="@id/foodpriceicon1"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        />
+    <ImageView
+        android:id="@+id/minues"
+        app:layout_constraintLeft_toRightOf="@id/food_price"
+        app:layout_constraintTop_toTopOf="@id/food_price"
+        android:layout_marginLeft="150dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:textColor="@color/textColor"
+        android:background="@drawable/ic_jian"
+        />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/ic_jia"
+        android:textColor="@color/textColor"
+        app:layout_constraintLeft_toRightOf="@id/food_num"
+        app:layout_constraintTop_toTopOf="@id/food_num" />
+
+    <EditText
+        android:id="@+id/food_num"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        app:layout_constraintLeft_toRightOf="@id/minues"
+        app:layout_constraintTop_toTopOf="@id/minues"
+        android:background="@null"
+        android:text="1"
+        android:textSize="30sp"
+        android:inputType="number"
+        />
+
+    <TextView
+        android:id="@+id/food_add"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:text="ADD"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/minues"
+        app:layout_constraintLeft_toLeftOf="@id/minues"
+        app:layout_constraintRight_toRightOf="@id/plus"
+        android:layout_marginTop="50dp"/>
+
+    <TextView
+        android:id="@+id/food_des"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/et_bg"
+        android:gravity="top"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/textColor"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/food_add"
+        tools:layout_editor_absoluteX="30dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
